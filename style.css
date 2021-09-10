@@ -1,0 +1,137 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container::before {
+    display: block;
+    content: url("images/bg-pattern-top.svg");
+    position: absolute;
+    left: 0%;
+    top: -50%;
+    z-index: 1;
+}
+
+.container::after {
+    display: block;
+    content: url("images/bg-pattern-bottom.svg");
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    z-index: 1;
+    /* right: -125%;
+    top: 50%; */
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    background-color: hsl(185, 75%, 39%);
+    color: hsl(0, 0%, 59%);
+    overflow: hidden;
+}
+
+.content {
+    z-index: 2;
+}
+
+.top {
+    padding: 0;  /* kako da otklonim belu liniju u donjem delu */
+    margin: 0;
+    position: relative;
+}
+
+.top svg {
+    border-radius: 10px 10px 0 0;
+    display: block;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+}
+
+.middle .victor {
+    display: block;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    transform: translateY(-50%);
+}
+
+.middle p {
+    transform: translateY(-170%);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    padding: 22px 0px;
+    background-color: #fff;
+    border-top: 1px solid hsl(0, 0%, 59%);
+}
+
+.numbers, .name {
+    font-weight: bold;
+    color: hsl(229, 23%, 23%);
+    font-size: 18px;
+}
+
+.age {
+    font-size: 18px;
+}
+
+.place {
+    font-size: 15px;
+}
+
+.description {
+    padding-top: 5px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (max-width: 1440px) {
+    .container::before {
+        left: -20%;
+    }
+
+    .container::after {
+        right: -20%;
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+    .container::before {
+        left: -125%;
+    }
+
+    .container::after {
+        right: -125%;
+    }
+}
+
+
+
+
+
+
+
+
+
