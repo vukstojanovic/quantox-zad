@@ -87,7 +87,7 @@ body {
 }
 
 .numbers, .name {
-    font-weight: bold;
+    font-weight: 700;
     color: hsl(229, 23%, 23%);
     font-size: 18px;
 }
@@ -116,6 +116,35 @@ body {
     }
 }
 
+@media only screen and (max-width: 1240px) {
+    .container::before {
+        left: -30%;
+    }
+
+    .container::after {
+        right: -30%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container::before {
+        left: -60%;
+    }
+
+    .container::after {
+        right: -60%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .container::before {
+        left: -85%;
+    }
+
+    .container::after {
+        right: -85%;
+    }
+}
 
 @media only screen and (max-width: 550px) {
     .container::before {
@@ -128,7 +157,25 @@ body {
 }
 
 
+@media only screen and (max-width: 450px) {
+    .container::before {
+        left: -160%;
+    }
 
+    .container::after {
+        right: -160%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .container::before {
+        left: -185%;
+    }
+
+    .container::after {
+        right: -185%;
+    }
+}
 
 
 
