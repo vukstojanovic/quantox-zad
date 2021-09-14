@@ -1,4 +1,12 @@
 
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --white: #fff;
+    --top-border-c: hsl(0, 5%, 88%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -10,39 +18,41 @@ body {
     overflow: hidden;
 }
 
-.container::before {
+main::before {
     display: block;
     content: url("images/bg-pattern-top.svg");
     position: absolute;
-    left: 0%;
+    left: -185%;
     top: -50%;
     z-index: 1;
 }
 
-.container::after {
+main::after {
     display: block;
     content: url("images/bg-pattern-bottom.svg");
     position: absolute;
-    right: 0%;
+    right: -185%;
     top: 50%;
     z-index: 1;
     /* right: -125%;
     top: 50%; */
 }
 
-.container {
+main {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
-    background-color: hsl(185, 75%, 39%);
-    color: hsl(0, 0%, 59%);
+    background-color: var(--dark-cyan);
+    color: var(--dark-gray);
     overflow: hidden;
 }
 
-.content {
+section {
     z-index: 2;
+    box-shadow: 3px 3px 30px rgb(71, 70, 70);
+    border-radius: 10px;
 }
 
 .top {
@@ -62,13 +72,13 @@ body {
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    background-color: #fff;
+    background-color: var(--white);
 }
 
 .middle .victor {
     display: block;
     border-radius: 50%;
-    border: 5px solid #fff;
+    border: 5px solid var(--white);
     transform: translateY(-50%);
 }
 
@@ -82,13 +92,13 @@ body {
     text-align: center;
     border-radius: 0 0 10px 10px;
     padding: 22px 0px;
-    background-color: #fff;
-    border-top: 1px solid hsl(0, 5%, 88%);
+    background-color: var(--white);
+    border-top: 1px solid var(--top-border-c);
 }
 
 .numbers, .name {
     font-weight: 700;
-    color: hsl(229, 23%, 23%);
+    color: var(--desaturated-blue);
     font-size: 18px;
 }
 
@@ -106,74 +116,74 @@ body {
     letter-spacing: 2px;
 }
 
-@media only screen and (max-width: 1440px) {
-    .container::before {
-        left: -20%;
-    }
 
-    .container::after {
-        right: -20%;
-    }
-}
-
-@media only screen and (max-width: 1240px) {
-    .container::before {
-        left: -30%;
-    }
-
-    .container::after {
-        right: -30%;
-    }
-}
-
-@media only screen and (max-width: 900px) {
-    .container::before {
-        left: -60%;
-    }
-
-    .container::after {
-        right: -60%;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .container::before {
-        left: -85%;
-    }
-
-    .container::after {
-        right: -85%;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .container::before {
-        left: -125%;
-    }
-
-    .container::after {
-        right: -125%;
-    }
-}
-
-
-@media only screen and (max-width: 450px) {
-    .container::before {
+@media only screen and (min-width: 376px) and (max-width: 450px) {
+    main::before {
         left: -160%;
     }
 
-    .container::after {
+    main::after {
         right: -160%;
     }
 }
 
-@media only screen and (max-width: 375px) {
-    .container::before {
-        left: -185%;
+@media only screen and (min-width: 451px) and (max-width: 550px) {
+    main::before {
+        left: -125%;
     }
 
-    .container::after {
-        right: -185%;
+    main::after {
+        right: -125%;
+    }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 700px) {
+    main::before {
+        left: -85%;
+    }
+
+    main::after {
+        right: -85%;
+    }
+}
+
+@media only screen and (min-width: 701px) and (max-width: 900px) {
+    main::before {
+        left: -60%;
+    }
+
+    main::after {
+        right: -60%;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1240px) {
+    main::before {
+        left: -30%;
+    }
+
+    main::after {
+        right: -30%;
+    }
+}
+
+@media only screen and (min-width: 1241px) and (max-width: 1440px) {
+    main::before {
+        left: -20%;
+    }
+
+    main::after {
+        right: -20%;
+    }
+}
+
+@media only screen and (min-width: 1441px) {
+    main::before {
+        left: 0%;
+    }
+
+    main::after {
+        right: 0%;
     }
 }
 
