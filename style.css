@@ -16,47 +16,43 @@
 
 body {
     overflow: hidden;
+    height: 100%;
 }
 
 main::before {
-    display: block;
     content: url("images/bg-pattern-top.svg");
-    position: absolute;
+    position: fixed;
     left: -185%;
     top: -50%;
-    z-index: 1;
 }
 
 main::after {
-    display: block;
     content: url("images/bg-pattern-bottom.svg");
-    position: absolute;
+    position: fixed;
     right: -185%;
     top: 50%;
-    z-index: 1;
-    /* right: -125%;
-    top: 50%; */
 }
 
 main {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 12px;
     background-color: var(--dark-cyan);
     color: var(--dark-gray);
-    overflow: hidden;
 }
 
 section {
     z-index: 2;
-    box-shadow: 3px 3px 30px rgb(71, 70, 70);
+    box-shadow: 3px 3px 50px rgb(71, 70, 70);
     border-radius: 10px;
 }
 
+/* rgb(71, 70, 70) */
+
 .top {
-    padding: 0;  /* kako da otklonim belu liniju u donjem delu */
+    padding: 0;
     margin: 0;
     position: relative;
 }
